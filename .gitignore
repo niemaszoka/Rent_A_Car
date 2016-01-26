@@ -4,11 +4,6 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 
-# Cache and logs (Symfony3)
-/var/cache/*
-/var/logs/*
-!var/cache/.gitkeep
-!var/logs/.gitkeep
 
 # Parameters
 /app/config/parameters.yml
@@ -38,3 +33,18 @@
 
 # Composer PHAR
 /composer.phar
+
+/phpunit.xml
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/vendor/
+/web/bundles/
