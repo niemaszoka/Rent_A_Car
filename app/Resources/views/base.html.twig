@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        {% endblock %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('styles/index.css') }}">        
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        {% block body %}{% endblock %}
+               
+        {% block body %}    
+        {% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
 </html>

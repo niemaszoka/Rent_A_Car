@@ -1,0 +1,96 @@
+/*
+>>> Colors <<<
+dark: #241623;
+medium: #3C787E;
+light: #E6E8E6;
+accent: #E26D5A;
+neon: #C7EF00;
+
+*/
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+.centered {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.entry-background {
+	z-index: -2;
+	top: 0px;
+	bottom: 0px;
+	background: #3C787E;
+	position: absolute;
+	filter: saturate(200%);
+}
+
+.entry-image {
+	z-index: -1;
+	top: 0px;
+	bottom: 0px;
+	background-image: url('../images/background.jpg');
+	background-size: cover;
+	opacity: 0.5;
+	-webkit-filter: saturate(150%);
+	filter: saturate(150%);
+}
+
+.entry-gradient {
+	top: 0px;
+	bottom: 0px;
+	background: -moz-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(15%, rgba(36,22,35,1)), color-stop(100%, rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
+	background: linear-gradient(to bottom, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#241623', endColorstr='#3c787e', GradientType=0 );
+}
+
+.entry-header {
+	flex-basis: 50%;
+	color: #C7EF00;
+	font-weight: 400;
+	font-size: 35px;
+	letter-spacing: 3px;
+}
+
+.entry-bar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+}
+
+.entry-button {
+	width: 300px;
+	height: 70px;
+	border-radius: 12px;
+	background-color: transparent;
+	border: 5px solid #C7EF00;
+	cursor: pointer;
+}
+
+.entry-button:hover {
+	background-color: #C7EF00;
+	opacity: 0.5;
+	border: 5px solid rgba(199, 239, 0, 1);
+}
+
+.entry-button-title {
+	color: #C7EF00;
+	font-size: 26px;
+	font-weight: 700;
+}
+
+.entry-button:hover >.entry-button-title {
+	color: #3C787E;
+}

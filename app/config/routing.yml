@@ -1,3 +1,24 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+# app:
+#     resource: "@AppBundle/Controller/"
+#     type:     annotation
+
+entry:
+ path: /
+ defaults:
+  _controller: AppBundle:Default:entry
+list:
+ path: /display_cars
+ defaults:
+  _controller: AppBundle:Default:list
+form:
+ path: /form
+ defaults:
+  _controller: AppBundle:Default:form
+processPayment:
+ path: /payment
+ defaults:
+  _controller: AppBundle:Default:processPayment
+confirm_payment:
+ path: /confirm_payment
+ defaults:
+  _controller: AppBundle:Default:confirmPayment
