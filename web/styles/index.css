@@ -18,6 +18,10 @@ neon: #C7EF00;
 	right: 0px;
 }
 
+.neon {
+	color: #C7EF00;
+}
+
 .entry-background {
 	z-index: -2;
 	top: 0px;
@@ -51,11 +55,12 @@ neon: #C7EF00;
 }
 
 .entry-header {
-	flex-basis: 50%;
-	color: #C7EF00;
+	color: #3C787E;
 	font-weight: 400;
-	font-size: 35px;
+	font-size: 40px;
 	letter-spacing: 3px;
+	position: relative;
+	top: -100px;
 }
 
 .entry-bar {
@@ -87,7 +92,7 @@ neon: #C7EF00;
 
 .entry-button-title {
 	color: #C7EF00;
-	font-size: 26px;
+	font-size: 30px;
 	font-weight: 700;
 }
 
