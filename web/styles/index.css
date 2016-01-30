@@ -2,8 +2,8 @@
 >>> Colors <<<
 dark: #241623;
 medium: #3C787E;
-light: #E6E8E6;
-accent: #E26D5A;
+light: #F1F1F1;
+accent: #B3001B;
 neon: #C7EF00;
 
 */
@@ -12,6 +12,10 @@ neon: #C7EF00;
 	font-weight: 400;
 }
 
+html {
+	background-color: #F1F1F1;
+	overflow: hidden;
+}
 .centered {
 	position: absolute;
 	left: 0px;
