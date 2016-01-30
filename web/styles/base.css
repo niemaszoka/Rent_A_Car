@@ -1,0 +1,26 @@
+/*>>> Colors <<<
+dark: #241623;
+medium: #F1F1F1;
+light: #E6E8E6;
+accent: #B3001B;
+neon: #C7EF00;
+*/
+
+.base-navbar {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	height: 40px;
+	background-color: #241623;
+}
+
+.base-header {
+	color: #3C787E;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: 3px;
+	position: relative;
+	left: 48px;
+	top: 4px;
+}

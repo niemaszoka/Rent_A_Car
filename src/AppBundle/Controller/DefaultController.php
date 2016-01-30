@@ -18,9 +18,12 @@ class DefaultController extends Controller
 
     public function listAction(Request $request)
     {
-        // replace this example code with whatever you need
+
+        $fileContent = json_decode(file_get_contents('../src/data/carsData.json'), true);
+
         return $this->render('default/list.html.twig', [
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+            'cars' => $fileContent['cars']
         ]);
     }
 }
