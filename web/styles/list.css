@@ -76,7 +76,8 @@ neon: #C7EF00;
 }
 
 .list-item-checkbox:checked + .list-item {
-	border: 2px solid #C7EF00;
+	border: 1px solid #C7EF00;
+	border-left: 10px solid #C7EF00;
 }
 
 .list-item-checkbox:checked + .list-item:hover {

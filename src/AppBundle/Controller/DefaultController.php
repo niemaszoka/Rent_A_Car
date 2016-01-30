@@ -2,9 +2,11 @@
 
 namespace AppBundle\Controller;
 
+use CarRental\Component\CarsList;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+
 
 class DefaultController extends Controller
 {
@@ -19,11 +21,12 @@ class DefaultController extends Controller
     public function listAction(Request $request)
     {
 
-        $fileContent = json_decode(file_get_contents('../src/data/carsData.json'), true);
+        $carsService = $this->get('cars_service');
+        $cars = $carsService->getAvailableCars();
 
         return $this->render('default/list.html.twig', [
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-            'cars' => $fileContent['cars']
+            'cars' => $cars
         ]);
     }
 }
