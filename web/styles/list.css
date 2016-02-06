@@ -12,7 +12,7 @@ neon: #C7EF00;
 	background-color: transparent;
 	position: absolute;
 	top: 40px;
-	height: 600px;
+	height: 80%;
 	display: inline-block;
 	padding: 20px;
 	float: right;
@@ -52,7 +52,7 @@ neon: #C7EF00;
 }
 
 .list {
-	height: inherit;
+	height: 80%;
 	overflow-y: scroll;
 }
 
@@ -124,6 +124,10 @@ neon: #C7EF00;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px	
+}
+
+.list-item > a {
+	visibility: hidden;
 }
 
 ::-webkit-scrollbar {

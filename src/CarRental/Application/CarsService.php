@@ -9,7 +9,8 @@ class CarsService
 
     public function __construct($dataService)
     {
-        $this->cars = $dataService->getData('cars');
+        $this->dataService = $dataService;
+        $this->cars = $this->dataService->getData('cars');        
     }
 
     public function getAvailableCars()
