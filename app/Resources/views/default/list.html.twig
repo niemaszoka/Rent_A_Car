@@ -17,7 +17,7 @@
 	    		<div class="list-item-name">{{car['name']}}</div>
 	    		<div class="list-item-segment">{{car['segment']}}</div>
 				<div class="list-item-price">{{car['PLNperDay']}} PLN</div>
-	    		<button class="list-item-button" name="rent"><span>RENT</span></button>
+	    		<button class="list-item-button" name="rent"><span><a href="{{ url('rent')}}?CarID={{key}}&Brand={{car['name']}}&Segment={{car['segment']}}&PricePerDay={{car['PLNperDay']}}">RENT</a></span></button>
 		    </label>
 			{% endfor %}
 		</form>

@@ -13,7 +13,7 @@ list:
 rent:
  path: /rent_car
  defaults:
-  _controller: AppBundle:Default:rentCar
+  _controller: AppBundle:Default:rentForm
 processPayment:
  path: /payment
  defaults:
