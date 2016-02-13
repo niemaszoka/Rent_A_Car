@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{{ parent() }}
+
+<div class="rent-wrapper">
+	<div class="rent-car-data">
+		<div class="rent-car-header">CHOOSEN CAR</div>
+		<div class="rent-car-property car-name">
+			<div class="rent-car-label">BRAND</div>
+			{{carData['name']}}
+		</div>
+		
+		<div class="rent-car-property car-segment">
+			<div class="rent-car-label">SEGMENT</div>
+			{{carData['segment']}}
+		</div>
+		
+		<div class="rent-car-property car-price">
+			<div class="rent-car-label">PRICE PER DAY</div>
+			{{carData['PLNperDay']}} PLN
+		</div>
+	</div>
+
+	<div class="rent-form-summary">
+		<div class="rent-form-property">
+		    <span class="rent-form-label">FIRST NAME</span>
+			<span>{{formData.firstName}}</span>
+		</div>
+		<div class="rent-form-property">
+		    <span class="rent-form-label">LAST NAME</span>
+			<span>{{formData.lastName}}</span>
+		</div>
+				<div class="rent-form-property">
+		    <span class="rent-form-label">EMAIL</span>
+			<span>{{formData.email}}</span>
+		</div>
+		<div class="rent-form-property">
+		    <span class="rent-form-label">SUM</span>
+			<span>{{formData.initialAmount}} PLN</span>
+		</div>
+		<div class="rent-form-property">
+		    <span class="rent-form-label">DISCOUNT</span>
+			<span>- {{formData.discount}} PLN</span>
+		</div>
+		<div class="rent-form-property">
+		    <span class="rent-form-label">TOTAL AMOUNT</span>
+			<span>{{formData.totalAmount}} PLN</span>
+		</div>
+
+		<a class="rent-form-payment" href="{{ url('payment')}}">
+			<div class="">
+				<span>PAYMENT</span>
+			</div>
+		</a>
+
+	</div>
+</div>
+
+{% endblock %}

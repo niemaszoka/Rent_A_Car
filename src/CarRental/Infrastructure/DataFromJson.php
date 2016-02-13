@@ -12,4 +12,8 @@ class DataFromJson implements DataArray
 
         return $array;
     }
+
+    public function saveData($path, $data){
+        file_put_contents($path, json_encode($data, JSON_PRETTY_PRINT));
+    }
 }

@@ -14,8 +14,16 @@ services:
   class: CarRental\Application\DataService
   arguments:
    - "@dataJSON"
-
  cars_service:
   class: CarRental\Application\CarsService
   arguments:
    - "@data_service"
+ users_service:
+  class: CarRental\Application\UsersService
+  arguments:
+   - "@data_service"
+ form_service:
+  class: AppBundle\Form\RentFormService
+  arguments:
+   - "@users_service"
+   - "@cars_service"

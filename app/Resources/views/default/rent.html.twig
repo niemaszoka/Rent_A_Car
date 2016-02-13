@@ -3,7 +3,67 @@
 {% block body %}
 	{{ parent() }}
 
-<br><br><br><br>
-{{ form(form) }}
+<div class="rent-wrapper">
+	<div class="rent-car-data">
+		<div class="rent-car-header">CHOOSEN CAR</div>
+		<div class="rent-car-property car-name">
+			<div class="rent-car-label">BRAND</div>
+			{{carData['name']}}
+		</div>
+		
+		<div class="rent-car-property car-segment">
+			<div class="rent-car-label">SEGMENT</div>
+			{{carData['segment']}}
+		</div>
+		
+		<div class="rent-car-property car-price">
+			<div class="rent-car-label">PRICE PER DAY</div>
+			{{carData['PLNperDay']}} PLN
+		</div>
+	</div>
+
+	<form class="rent-form" name="rentForm" method="post">
+		<div class="rent-form-header">PLEASE ENTER YOUR DATA</div>
+		<div class="rent-form-property">
+		    <label class="rent-form-label" for="rent_form_email">EMAIL</label>
+		    <input class="rent-form-input" 
+		    	type="text" 
+		    	id="rent_form_email" 
+		    	name="rent_form[email]" 
+		    	required="required"/>
+		</div>
+		<div class="rent-form-property">
+		    <label class="rent-form-label" for="rent_form_firstName">FIRST NAME</label>
+		    <input class="rent-form-input" 
+		    	type="text" 
+		    	id="rent_form_firstName" 
+		    	name="rent_form[firstName]" 
+		    	required="required"/>
+		</div>
+		<div class="rent-form-property">
+		    <label class="rent-form-label" for="rent_form_lastName">LAST NAME</label>
+		    <input class="rent-form-input" 
+		    	type="text" 
+		    	id="rent_form_lastName" 
+		    	name="rent_form[lastName]" 
+		    	required="required"/>
+		</div>
+		<div class="rent-form-property">
+		    <label class="rent-form-label" for="rent_form_rentDays">RENTAL DURATION</label>
+		    <input class="rent-form-input" 
+		    	type="text" 
+		    	id="rent_form_rentDays" 
+		    	name="rent_form[rentDays]" 
+		    	required="required"/>
+		    <span class="rent-form-label">DAYS</span>
+		</div>
+		<input type="hidden" id="rent_form_carId" name="rent_form[carId]" value="{{carData['id']}}">
+		<input type="hidden" id="rent_form_pricePerDay" name="rent_form[pricePerDay]" value="{{carData['PLNperDay']}}">
+		{{ form_row(form._token) }}
+
+		<input class="rent-form-button" type="submit" id="rent_form_confirm" name="rent_form[confirm]" value="CONFIRM DATA"></input>
+
+	</form>
+</div>
 
 {% endblock %}

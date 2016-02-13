@@ -14,7 +14,7 @@ rent:
  path: /rent_car
  defaults:
   _controller: AppBundle:Default:rentForm
-processPayment:
+payment:
  path: /payment
  defaults:
   _controller: AppBundle:Default:processPayment
