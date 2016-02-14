@@ -12,7 +12,7 @@ neon: #C7EF00;
 	background-color: transparent;
 	position: absolute;
 	top: 40px;
-	height: 600px;
+	height: 80%;
 	display: inline-block;
 	padding: 20px;
 	float: right;
@@ -52,7 +52,7 @@ neon: #C7EF00;
 }
 
 .list {
-	height: inherit;
+	height: 80%;
 	overflow-y: scroll;
 }
 
@@ -84,30 +84,51 @@ neon: #C7EF00;
 	background-color: transparent;
 }
 
-.list-item-checkbox:checked + .list-item > button{
+.list-item-checkbox:checked + .list-item > a.list-item-link {
 	visibility: visible;
 	cursor: pointer;
 }
 
-.list-item-price {
+.list-item-checkbox:checked + .list-item > a.list-item-link > div.list-item-button {
+	visibility: visible;
+	cursor: pointer;
+}
+
+.list-item > .car-price {
 	align-self: flex-end;
 	width: 100px;
 	text-align: right;
+	margin-right: 20px;
+}
+
+.car-price {
 	color: #3C787E;
 	font-size: 24px;
-	margin-right: 20px;
 	font-weight: 700;
 }
 
-.list-item-name {
+.list-item > .car-name {
 	font-size: 22px;
 	flex-grow: 2;
 	color: #B3001B;
 }
 
-.list-item-segment {
+.car-name {
+	font-size: 22px;
+	color: #B3001B;
+}
+
+.list-item > .car-segment {
 	color: #3C787E;
 	margin-right: 40px;
+}
+
+.car-segment {
+	color: #3C787E;
+}
+
+.list-item-link {
+	text-decoration: none;
 }
 
 .list-item-button {
@@ -117,13 +138,18 @@ neon: #C7EF00;
     border: none;
     background-color: #c7ef00;
     visibility: hidden;
-
+    text-align: center;
 }
 
 .list-item-button > span {
     font-weight: 700;
     font-size: 14px;
-    letter-spacing: 1px	
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+
+.list-item > a {
+	visibility: hidden;
 }
 
 ::-webkit-scrollbar {

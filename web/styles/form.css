@@ -1,0 +1,81 @@
+/*
+>>> Colors <<<
+dark: #241623;
+medium: #3C787E;
+light: #F1F1F1;
+accent: #B3001B;  rgba(226,109,90,1)
+neon: #C7EF00;
+
+*/
+
+.rent-wrapper {
+	background-color: transparent;
+	position: absolute;
+	top: 60px;
+	height: 80%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	float: right;
+	right: 200px;
+	left: 130px;
+	padding-bottom: 100px;
+	flex-wrap: wrap;
+}
+
+.rent-car-data, .rent-form {
+	margin: 50px;
+}
+
+.rent-car-data{
+	display: flex;
+	flex-direction: column;
+	height: 220px;
+	justify-content: space-around;
+}
+
+.rent-car-header, .rent-form-header {
+	color: #3C787E;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.rent-car-label, .rent-form-label {
+	width: 120px;
+	color: #3C787E;
+	font-size: 12px;
+}
+
+.rent-car-property, .rent-form-property {
+	display: flex;
+	align-items: center;
+}
+
+.rent-car-property {
+	height: 30px;
+}
+
+.rent-form, .rent-form-summary{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 290px;
+}
+
+.rent-form-input {
+	width: 200px;
+	height: 25px;
+	border: 1px solid #C7EF00;
+	border-left: 5px solid #C7EF00;
+	color: #241623;
+}
+
+.rent-form-button {
+	width: 250px;
+	height: 35px;
+	background-color: #C7EF00;
+	color: #241623;
+	font-weight: 700;
+	border: none;
+	font-size: 16px;
+}

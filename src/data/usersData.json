@@ -1,0 +1,22 @@
+{
+    "users": {
+        "1": {
+            "id": 1,
+            "firstName": "Sylwia",
+            "lastName": "Grzegolec",
+            "email": "s.grzegolec@gmail.com",
+            "rents": {
+                "2016-02": 19
+            }
+        },
+        "2": {
+            "id": 2,
+            "firstName": "Arkadiusz",
+            "lastName": "Jakubas",
+            "email": "arekjakubas@gmail.com",
+            "rents": {
+                "2016-02": 1
+            }
+        }
+    }
+}

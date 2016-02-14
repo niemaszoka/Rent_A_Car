@@ -10,11 +10,11 @@ list:
  path: /display_cars
  defaults:
   _controller: AppBundle:Default:list
-form:
- path: /form
+rent:
+ path: /rent_car
  defaults:
-  _controller: AppBundle:Default:form
-processPayment:
+  _controller: AppBundle:Default:rentForm
+payment:
  path: /payment
  defaults:
   _controller: AppBundle:Default:processPayment

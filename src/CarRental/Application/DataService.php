@@ -21,4 +21,9 @@ class DataService
         $array = $this->dataJSON->getData($this->sourcePaths[$type]);
         return $array[$type];
     }
+
+    public function saveData($type, $data){
+        $path = $this->sourcePaths[$type];
+        $this->dataJSON->saveData($path, $data);
+    }
 }

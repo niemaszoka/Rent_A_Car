@@ -1,202 +1,204 @@
-{"cars" : {
-  "car1": {
-    "id": "1",
-    "name": "Renault Twingo",
-    "segment": "city",
-    "PLNperDay": 80,
-    "booked": false,
-    "rented": false
-  },
-  "car2": {
-    "id": "2",
-    "name": "Ford Ka",
-    "segment": "city",
-    "PLNperDay": 70,
-    "booked": false,
-    "rented": false
-  },
-  "car3": {
-    "id": "3",
-    "name": "Renault Clio",
-    "segment": "small",
-    "PLNperDay": 140,
-    "booked": false,
-    "rented": false
-  },
-  "car4": {
-    "id": "4",
-    "name": "Seat Ibiza",
-    "segment": "small",
-    "PLNperDay": 120,
-    "booked": false,
-    "rented": false
-  },
-  "car5": {
-    "id": "5",
-    "name": "Skoda Fabia",
-    "segment": "small",
-    "PLNperDay": 140,
-    "booked": false,
-    "rented": false
-  },
-  "car6": {
-    "id": "6",
-    "name": "Audi A1",
-    "segment": "small",
-    "PLNperDay": 130,
-    "booked": false,
-    "rented": false
-  },
-  "car7": {
-    "id": "7",
-    "name": "Suzuki Swift",
-    "segment": "small",
-    "PLNperDay": 120,
-    "booked": false,
-    "rented": false
-  },
-  "car8": {
-    "id": "8",
-    "name": "Seat Leon",
-    "segment": "compact",
-    "PLNperDay": 170,
-    "booked": false,
-    "rented": false
-  },
-  "car9": {
-    "id": "9",
-    "name": "Renault Megane",
-    "segment": "compact",
-    "PLNperDay": 180,
-    "booked": false,
-    "rented": false
-  },
-  "car10": {
-    "id": "10",
-    "name": "Audi A3",
-    "segment": "compact",
-    "PLNperDay": 180,
-    "booked": false,
-    "rented": false
-  },
-  "car11": {
-    "id": "11",
-    "name": "Ford Focus",
-    "segment": "compact",
-    "PLNperDay": 160,
-    "booked": false,
-    "rented": false
-  },
-  "car12": {
-    "id": "12",
-    "name": "Opel Astra",
-    "segment": "compact",
-    "PLNperDay": 150,
-    "booked": false,
-    "rented": false
-  },
-  "car13": {
-    "id": "13",
-    "name": "Porsche Cayenne",
-    "segment": "SUV",
-    "PLNperDay": 240,
-    "booked": false,
-    "rented": false
-  },
-  "car14": {
-    "id": "14",
-    "name": "BMW X5",
-    "segment": "SUV",
-    "PLNperDay": 260,
-    "booked": false,
-    "rented": false
-  },
-  "car15": {
-    "id": "15",
-    "name": "Chevrolet Corvette",
-    "segment": "sports",
-    "PLNperDay": 800,
-    "booked": false,
-    "rented": false
-  },
-  "car16": {
-    "id": "16",
-    "name": "Audi R8",
-    "segment": "sports",
-    "PLNperDay": "800",
-    "booked": false,
-    "rented": false
-  },
-  "car17": {
-    "id": "17",
-    "name": "Nissan GT-R",
-    "segment": "sports",
-    "PLNperDay": 820,
-    "booked": false,
-    "rented": false
-  },
-  "car18": {
-    "id": "18",
-    "name": "Jeep Cherokee",
-    "segment": "off-road",
-    "PLNperDay": 250,
-    "booked": false,
-    "rented": false
-  },
-  "car19": {
-    "id": "19",
-    "name": "Land Rover Defender",
-    "segment": "off-road",
-    "PLNperDay": 250,
-    "booked": false,
-    "rented": false
-  },
-  "car20": {
-    "id": "20",
-    "name": "Toyota Land Cruiser",
-    "segment": "off-road",
-    "PLNperDay": 230,
-    "booked": false,
-    "rented": false
-  },
-  "car21": {
-    "id": "21",
-    "name": "Renault Scenic",
-    "segment": "van",
-    "PLNperDay": 170,
-    "booked": false,
-    "rented": false
-  },
-  "car22": {
-    "id": "22",
-    "name": "Citroën Xsara Picasso",
-    "segment": "van",
-    "PLNperDay": 190,
-    "booked": false,
-    "rented": false
-  },
-  "car23": {
-    "id": "23",
-    "name": "Renault Espace",
-    "segment": "van",
-    "PLNperDay": 180,
-    "booked": false,
-    "rented": false
-  },
-  "car24": {
-    "id": "24",
-    "name": "Volkswagen Sharan",
-    "segment": "van",
-    "PLNperDay": 180,
-    "booked": false,
-    "rented": false
-  },
-  "car25": {
-    "id": "25",
-    "name": "Opel Zafira",
-    "segment": "van",
-    "PLNperDay": 190,
-    "booked": false,
-    "rented": false
-  } 
-}}
+{
+    "cars": {
+        "1": {
+            "id": "1",
+            "name": "Renault Twingo",
+            "segment": "city",
+            "PLNperDay": 80,
+            "booked": false,
+            "rented": false
+        },
+        "2": {
+            "id": "2",
+            "name": "Ford Ka",
+            "segment": "city",
+            "PLNperDay": 70,
+            "booked": false,
+            "rented": false
+        },
+        "3": {
+            "id": "3",
+            "name": "Renault Clio",
+            "segment": "small",
+            "PLNperDay": 140,
+            "booked": false,
+            "rented": false
+        },
+        "4": {
+            "id": "4",
+            "name": "Seat Ibiza",
+            "segment": "small",
+            "PLNperDay": 120,
+            "booked": false,
+            "rented": false
+        },
+        "5": {
+            "id": "5",
+            "name": "Skoda Fabia",
+            "segment": "small",
+            "PLNperDay": 140,
+            "booked": false,
+            "rented": false
+        },
+        "6": {
+            "id": "6",
+            "name": "Audi A1",
+            "segment": "small",
+            "PLNperDay": 130,
+            "booked": false,
+            "rented": false
+        },
+        "7": {
+            "id": "7",
+            "name": "Suzuki Swift",
+            "segment": "small",
+            "PLNperDay": 120,
+            "booked": false,
+            "rented": false
+        },
+        "8": {
+            "id": "8",
+            "name": "Seat Leon",
+            "segment": "compact",
+            "PLNperDay": 170,
+            "booked": false,
+            "rented": false
+        },
+        "9": {
+            "id": "9",
+            "name": "Renault Megane",
+            "segment": "compact",
+            "PLNperDay": 180,
+            "booked": false,
+            "rented": false
+        },
+        "10": {
+            "id": "10",
+            "name": "Audi A3",
+            "segment": "compact",
+            "PLNperDay": 180,
+            "booked": false,
+            "rented": false
+        },
+        "11": {
+            "id": "11",
+            "name": "Ford Focus",
+            "segment": "compact",
+            "PLNperDay": 160,
+            "booked": false,
+            "rented": false
+        },
+        "12": {
+            "id": "12",
+            "name": "Opel Astra",
+            "segment": "compact",
+            "PLNperDay": 150,
+            "booked": false,
+            "rented": false
+        },
+        "13": {
+            "id": "13",
+            "name": "Porsche Cayenne",
+            "segment": "SUV",
+            "PLNperDay": 240,
+            "booked": false,
+            "rented": false
+        },
+        "14": {
+            "id": "14",
+            "name": "BMW X5",
+            "segment": "SUV",
+            "PLNperDay": 260,
+            "booked": false,
+            "rented": false
+        },
+        "15": {
+            "id": "15",
+            "name": "Chevrolet Corvette",
+            "segment": "sports",
+            "PLNperDay": 800,
+            "booked": false,
+            "rented": false
+        },
+        "16": {
+            "id": "16",
+            "name": "Audi R8",
+            "segment": "sports",
+            "PLNperDay": "800",
+            "booked": false,
+            "rented": false
+        },
+        "17": {
+            "id": "17",
+            "name": "Nissan GT-R",
+            "segment": "sports",
+            "PLNperDay": 820,
+            "booked": false,
+            "rented": false
+        },
+        "18": {
+            "id": "18",
+            "name": "Jeep Cherokee",
+            "segment": "off-road",
+            "PLNperDay": 250,
+            "booked": false,
+            "rented": false
+        },
+        "19": {
+            "id": "19",
+            "name": "Land Rover Defender",
+            "segment": "off-road",
+            "PLNperDay": 250,
+            "booked": false,
+            "rented": false
+        },
+        "20": {
+            "id": "20",
+            "name": "Toyota Land Cruiser",
+            "segment": "off-road",
+            "PLNperDay": 230,
+            "booked": false,
+            "rented": false
+        },
+        "21": {
+            "id": "21",
+            "name": "Renault Scenic",
+            "segment": "van",
+            "PLNperDay": 170,
+            "booked": false,
+            "rented": false
+        },
+        "22": {
+            "id": "22",
+            "name": "Citro\u00ebn Xsara Picasso",
+            "segment": "van",
+            "PLNperDay": 190,
+            "booked": false,
+            "rented": false
+        },
+        "23": {
+            "id": "23",
+            "name": "Renault Espace",
+            "segment": "van",
+            "PLNperDay": 180,
+            "booked": false,
+            "rented": false
+        },
+        "24": {
+            "id": "24",
+            "name": "Volkswagen Sharan",
+            "segment": "van",
+            "PLNperDay": 180,
+            "booked": false,
+            "rented": false
+        },
+        "25": {
+            "id": "25",
+            "name": "Opel Zafira",
+            "segment": "van",
+            "PLNperDay": 190,
+            "booked": false,
+            "rented": false
+        }
+    }
+}
