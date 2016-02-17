@@ -14,11 +14,11 @@ rent:
  path: /rent_car
  defaults:
   _controller: AppBundle:Default:rentForm
-payment:
- path: /payment
- defaults:
-  _controller: AppBundle:Default:processPayment
 confirm_payment:
  path: /confirm_payment
  defaults:
   _controller: AppBundle:Default:confirmPayment
+succesful_payment:
+ path: /succesful_payment
+ defaults:
+  _controller: AppBundle:Default:succesfulPayment

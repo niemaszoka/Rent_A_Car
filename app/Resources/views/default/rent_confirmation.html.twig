@@ -48,7 +48,7 @@
 			<span>{{formData.totalAmount}} PLN</span>
 		</div>
 
-		<a class="rent-form-payment" href="{{ url('payment')}}">
+		<a class="rent-form-payment" href="https://ssl.dotpay.pl/test_payment/?id=721088&amount={{formData.totalAmount}}&description=Oplata+za+wypozyczenie+{{carData['name']}}&URL=http://v-ie.uek.krakow.pl/~s180360/app_dev.php/succesful_payment&URLC=http://v-ie.uek.krakow.pl/~s180360/app_dev.php/confirm_payment?carId={{carData['id']}}&firstname={{formData.firstName}}&lastname={{formData.lastName}}&email={{formData.email}}&type=3&api_version=dev">
 			<div class="">
 				<span>PAYMENT</span>
 			</div>

@@ -5,10 +5,15 @@ namespace AppBundle\Controller;
 use CarRental\Component\CarsList;
 use AppBundle\Form\RentForm;
 use AppBundle\Entity\CarRental;
+use CarRental\Infrastructure\Payment\UrlcCheck;
+use CarRental\Infrastructure\Payment\ConfirmPayment;
+use CarRental\Domain\Exception\RentException;
+use CarRental\Application\CarRenting;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class DefaultController extends Controller
@@ -69,7 +74,31 @@ class DefaultController extends Controller
         ));
     }
 
-    public function paymentAction(Request $request) {
+    public function confirmPaymentAction(Request $request)    
+    {
+        $confirmPayment = new ConfirmPayment();
+        $carsService = $this->get('cars_service');
+	$carRenting = new CarRenting();
 
+        try {
+            $carRenting->completePurchase($carsService,
+            $_GET['carId'],
+                $confirmPayment->createPayment(
+                    new UrlcCheck(
+                        $request->request->all()
+                    )
+                )
+            );
+ 
+            return new Response('OK');
+        } catch (RentException $e) {
+            return new Response('FAIL');
+        }
+    }
+     
+    public function succesfulPaymentAction(Request $request) {
+        return $this->render('default/success.html.twig', [
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ]);
     }
 }
