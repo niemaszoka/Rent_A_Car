@@ -1,7 +1,8 @@
 <?php
 
 namespace CarRental\Infrastructure\Payment;
-class UrlcCheck
+
+class CompletePayment
 {
     const STATUS_OK = 'OK';
     const STATUS_FAIL = 'FAIL';

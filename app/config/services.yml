@@ -8,22 +8,25 @@ services:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
  dataJSON:
-  class: CarRental\Infrastructure\DataFromJson
-
+  class: DataAPI\Infrastructure\DataFromJson
  data_service:
-  class: CarRental\Application\DataService
+  class: DataAPI\Application\DataService
   arguments:
    - "@dataJSON"
  cars_service:
-  class: CarRental\Application\CarsService
+  class: DataAPI\Application\CarsService
   arguments:
    - "@data_service"
  users_service:
-  class: CarRental\Application\UsersService
+  class: DataAPI\Application\UsersService
   arguments:
    - "@data_service"
  form_service:
-  class: AppBundle\Form\RentFormService
+  class: CarRental\Application\RentFormService
   arguments:
    - "@users_service"
+   - "@cars_service"
+ payment_service:
+  class: CarRental\Application\PaymentService
+  arguments:
    - "@cars_service"

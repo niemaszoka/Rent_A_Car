@@ -3,18 +3,23 @@
 namespace CarRental\Application;
 use CarRental\Domain\Exception\RentException;
 use CarRental\Domain\Model\Payment;
-class CarRenting
+
+class PaymentService
 {
-    private $carId;
     private $carsService;
 
-    public function completePurchase($carsService, $carId, Payment $payment)
+    public function __construct($carsService)
     {
-    $this->carId = $carId;
+        $this->carsService = $carsService;
+    }
+
+    public function completePurchase($carId, Payment $payment)
+    {
         if ($payment->isFinished()) { 
             $carsService->rentCar($carId);
             return;
         }
+        
         throw new RentException('Missing payment');
     }
 }

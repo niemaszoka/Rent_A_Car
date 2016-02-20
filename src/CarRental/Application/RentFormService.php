@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Form;
+namespace CarRental\Application;
 
 class RentFormService
 {
@@ -70,8 +70,10 @@ class RentFormService
         $currentMonth = date("Y-m");
         $discount = 0;
 
-        if( array_key_exists($currentMonth, $userData['rents']) && $userData['rents'][$currentMonth] > 2){
-            $discount = $amount * 0.2;
+        if( $userData['rents'] !== null && array_key_exists($currentMonth, $userData['rents'])){
+            if($userData['rents'][$currentMonth] > 2){
+                $discount = $amount * 0.2;
+            }
         }
 
         return $discount;

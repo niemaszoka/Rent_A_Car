@@ -1,6 +1,6 @@
 <?php
 
-namespace CarRental\Domain;
+namespace DataAPI\Domain;
 
 interface DataArray
 {

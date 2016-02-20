@@ -3,6 +3,7 @@ namespace CarRental\Domain\Model;
 class Payment
 {
     private $finished;
+    
     public function confirm()
     {
         $this->finished = true;

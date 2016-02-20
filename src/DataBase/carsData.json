@@ -13,7 +13,7 @@
             "name": "Ford Ka",
             "segment": "city",
             "PLNperDay": 70,
-            "booked": false,
+            "booked": true,
             "rented": false
         },
         "3": {
@@ -21,7 +21,7 @@
             "name": "Renault Clio",
             "segment": "small",
             "PLNperDay": 140,
-            "booked": false,
+            "booked": true,
             "rented": false
         },
         "4": {
@@ -37,7 +37,7 @@
             "name": "Skoda Fabia",
             "segment": "small",
             "PLNperDay": 140,
-            "booked": false,
+            "booked": true,
             "rented": false
         },
         "6": {
@@ -53,7 +53,7 @@
             "name": "Suzuki Swift",
             "segment": "small",
             "PLNperDay": 120,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "8": {
@@ -117,7 +117,7 @@
             "name": "Chevrolet Corvette",
             "segment": "sports",
             "PLNperDay": 800,
-            "booked": false,
+            "booked": true,
             "rented": false
         },
         "16": {
@@ -173,7 +173,7 @@
             "name": "Citro\u00ebn Xsara Picasso",
             "segment": "van",
             "PLNperDay": 190,
-            "booked": false,
+            "booked": true,
             "rented": false
         },
         "23": {
@@ -181,7 +181,7 @@
             "name": "Renault Espace",
             "segment": "van",
             "PLNperDay": 180,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "24": {

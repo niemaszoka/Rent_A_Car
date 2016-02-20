@@ -1,6 +1,6 @@
 <?php
 
-namespace CarRental\Application;
+namespace DataAPI\Application;
 
 class CarsService
 {

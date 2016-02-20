@@ -5,8 +5,8 @@ namespace AppBundle\Controller;
 use CarRental\Component\CarsList;
 use AppBundle\Form\RentForm;
 use AppBundle\Entity\CarRental;
-use CarRental\Infrastructure\Payment\UrlcCheck;
-use CarRental\Infrastructure\Payment\ConfirmPayment;
+use CarRental\Infrastructure\Payment\ComletePayment;
+use CarRental\Infrastructure\Payment\PaymentFactory;
 use CarRental\Domain\Exception\RentException;
 use CarRental\Application\CarRenting;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -40,24 +40,22 @@ class DefaultController extends Controller
     public function rentFormAction(Request $request)
     {
 
+        $carsService = $this->get('cars_service');
+        $formService = $this->get('form_service');
+
         $carRental = new CarRental();    
         $form = $this->createForm(RentForm::class, $carRental);
 
         $form->handleRequest($request);
 
 
-        $carsService = $this->get('cars_service');
-
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $formService = $this->get('form_service');
             $formData = $form->getData();
 
             $resultData = $formService->handleSubmission(
                 $form->getData()
             );
-            
-            var_dump($resultData);
 
             return $this->render('default/rent_confirmation.html.twig', array(
                 'formData' => $resultData,
@@ -68,7 +66,7 @@ class DefaultController extends Controller
         $carId = $_GET['carId']; 
         $carsService->bookCar($carId);
 
-        return $this->render('default/rent.html.twig', array(
+        return $this->render('default/rent_form.html.twig', array(
             'form' => $form->createView(),
             'carData' => $carsService->getCar($carId)
         ));
@@ -76,15 +74,16 @@ class DefaultController extends Controller
 
     public function confirmPaymentAction(Request $request)    
     {
-        $confirmPayment = new ConfirmPayment();
+        $paymentFactory = new PaymentFactory();
         $carsService = $this->get('cars_service');
-	$carRenting = new CarRenting();
+        $paymentService = $this->get('payment_service');
 
         try {
-            $carRenting->completePurchase($carsService,
-            $_GET['carId'],
-                $confirmPayment->createPayment(
-                    new UrlcCheck(
+            $paymentService->completePurchase(
+                $carsService,
+                $_GET['carId'],
+                $PaymentFactory->createPayment(
+                    new ComletePayment(
                         $request->request->all()
                     )
                 )
@@ -97,7 +96,7 @@ class DefaultController extends Controller
     }
      
     public function succesfulPaymentAction(Request $request) {
-        return $this->render('default/success.html.twig', [
+        return $this->render('default/succesfull_payment.html.twig', [
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ]);
     }
