@@ -70,7 +70,7 @@ class CarRental
     }
 
     public function getTotalAmount(){
-        return $this->pricePerDay;
+        return $this->totalAmount;
     }
 
     public function setInitialAmount($amount){

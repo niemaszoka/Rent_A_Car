@@ -6,6 +6,26 @@ accent: #B3001B;
 neon: #C7EF00;
 */
 
+* {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+html {
+	background-color: #F1F1F1;
+	/*overflow: hidden;*/
+	overflow-x: hidden;
+}
+.centered {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+
+.neon {
+	color: #C7EF00;
+}
+
 .base-navbar {
 	position: absolute;
 	top: 0px;
@@ -21,6 +41,6 @@ neon: #C7EF00;
 	font-size: 14px;
 	letter-spacing: 3px;
 	position: relative;
-	left: 48px;
+	left: 75px;
 	top: 4px;
 }

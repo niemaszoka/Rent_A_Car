@@ -1,8 +1,8 @@
 <?php
 
-namespace CarRental\Infrastructure;
+namespace DataAPI\Infrastructure;
 
-use CarRental\Domain\DataArray;
+use DataAPI\Domain\DataArray;
 
 class DataFromJson implements DataArray
 {

@@ -16,54 +16,101 @@ neon: #C7EF00;
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
-	float: right;
-	right: 200px;
-	left: 130px;
-	padding-bottom: 100px;
+	float: right;  
+	left: 0px;
 	flex-wrap: wrap;
 }
 
-.rent-car-data, .rent-form {
+.rent-car-data, .rent-form, .rent-form-summary {
 	margin: 50px;
 }
 
-.rent-car-data{
-	display: flex;
-	flex-direction: column;
-	height: 220px;
-	justify-content: space-around;
+.rent-form-summary, .rent-form{
+	justify-content: space-between;
+	width: 400px;
 }
 
-.rent-car-header, .rent-form-header {
+.rent-car-data, .rent-form-summary, .rent-form{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #C7EF00;
+    position: relative;
+    padding: 30px;
+    padding-top: 0px;
+    left: 80px;
+    height: 350px;
+}
+
+.rent-car-data{
+	width: 300px;
+	justify-content: flex-start;
+}
+.rent-form-header, .rent-form-button {
 	color: #3C787E;
 	font-size: 18px;
 	font-weight: 700;
+	letter-spacing: 1px;
 }
 
+.rent-form-header {
+	background-color: #C7EF00;
+    height: 50px;
+	line-height: 50px;
+    width: 430px;
+    position: relative;
+    left: -30px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.rent-car-data > .rent-form-header {
+	width: 330px;
+}
 .rent-car-label, .rent-form-label {
 	width: 120px;
 	color: #3C787E;
 	font-size: 12px;
+	padding-bottom: 10px;
 }
 
-.rent-car-property, .rent-form-property {
+.rent-car-value{
+	width: 100%;
+	text-align: center;
+}
+
+.rent-form-value {
+	color: #3C787E;
+	font-weight:  700;
+}
+
+.rent-form-value.total-amount {
+	font-size: 18px;
+		color: #B3001B;
+}
+
+.rent-form-property {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .rent-car-property {
-	height: 30px;
+	height: 100px;
 }
 
-.rent-form, .rent-form-summary{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	height: 290px;
+.rent-car-property.car-name > span {
+	text-align: right;
+}
+
+
+.rent-form-summary{
+	border: 1px solid #C7EF00;
+	padding: 30px;
+	padding-top: 0px;
 }
 
 .rent-form-input {
-	width: 200px;
+	width: 250px;
 	height: 25px;
 	border: 1px solid #C7EF00;
 	border-left: 5px solid #C7EF00;
@@ -71,11 +118,17 @@ neon: #C7EF00;
 }
 
 .rent-form-button {
-	width: 250px;
-	height: 35px;
+	width: 200px;
+	height: 50px;
 	background-color: #C7EF00;
-	color: #241623;
-	font-weight: 700;
 	border: none;
-	font-size: 16px;
+	margin-top: 30px;
+	position: relative;
+	left: 110px;
+	line-height: 50px;
+    text-align: center;
+}
+
+.rent-form-payment {
+	text-decoration: none;
 }

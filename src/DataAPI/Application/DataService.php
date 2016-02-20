@@ -1,6 +1,6 @@
 <?php
 
-namespace CarRental\Application;
+namespace DataAPI\Application;
 
 class DataService
 {
@@ -10,8 +10,8 @@ class DataService
     public function __construct($dataJSON)
     {
         $this->sourcePaths = array(
-            'cars' => '../src/data/carsData.json',
-            'users' => '../src/data/usersData.json'
+            'cars' => '../src/DataBase/carsData.json',
+            'users' => '../src/DataBase/usersData.json'
         );
         $this->dataJSON = $dataJSON;
     }

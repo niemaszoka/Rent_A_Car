@@ -7,24 +7,6 @@ accent: #B3001B;
 neon: #C7EF00;
 
 */
-* {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-}
-
-html {
-	background-color: #F1F1F1;
-	/*overflow: hidden;*/
-}
-.centered {
-	position: absolute;
-	left: 0px;
-	right: 0px;
-}
-
-.neon {
-	color: #C7EF00;
-}
 
 .entry-background {
 	z-index: -2;
@@ -82,7 +64,6 @@ html {
 .entry-button {
 	width: 300px;
 	height: 70px;
-	border-radius: 12px;
 	background-color: transparent;
 	border: 5px solid #C7EF00;
 	cursor: pointer;
