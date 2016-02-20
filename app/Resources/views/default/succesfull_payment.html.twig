@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{{ parent() }}
+
+	<div class="endscreen centered">
+		<div class="endscreen-image centered"></div>
+		<div class="endscreen-cover centered"></div>
+		<div class="endscreen-note">
+			<div class="endscreen-note-header">Your order is completed. Drive carefully.</div>
+			<div class="endscreen-redirect">
+				<a  href="{{ url('list') }}">
+					<button class="endscreen-button">
+						<span class="endscreen-button-title"> RENT ANOTHER CAR </span>
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
