@@ -15,7 +15,6 @@ class RentFormService
     public function onPaymentSuccess($data){
         
         $this->carsService->rentCar($data->getCarId());
-        $this->carsService->cancelBooking($data->getCarId());
         $this->usersService->rentCar($data);
     }
 

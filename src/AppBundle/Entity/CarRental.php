@@ -6,6 +6,8 @@ namespace AppBundle\Entity;
 class CarRental
 {
     protected $carId;
+    protected $carName;
+    protected $carSegment;
     protected $email;
     protected $firstName;
     protected $lastName;
@@ -22,6 +24,24 @@ class CarRental
     public function setCarID($carId)
     {
         $this->carId = $carId;
+    }
+    public function getCarName()
+    {
+        return $this->carName;
+    }
+    public function setCarName($carName)
+    {
+        $this->carName = $carName;
+    }
+
+    public function getCarSegment()
+    {
+        return $this->carSegment;
+    }
+
+    public function setCarSegment($carSegment)
+    {
+        $this->carSegment = $carSegment;
     }
 
     public function setEmail($email){

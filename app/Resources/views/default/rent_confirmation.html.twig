@@ -3,25 +3,23 @@
 {% block body %}
 	{{ parent() }}
 
-<div class="rent-wrapper">
+<div class="rent-wrapper">	
 	<div class="rent-car-data">
 		<div class="rent-form-header">CHOOSEN CAR</div>
 		<div class="rent-car-property">
 			<div class="rent-car-label">BRAND</div>
-			<div class="rent-car-value car-name">{{carData['name']}}</div>
+			<div class="rent-car-value car-name">{{formData.carName}}</div>
 		</div>
 		<div class="rent-car-property">
 			<div class="rent-car-label">PRICE PER DAY</div>
-			<div class="rent-car-value car-price">{{carData['PLNperDay']}} PLN</div>
+			<div class="rent-car-value car-price">{{formData.pricePerDay}} PLN</div>
 		</div>
 
 		<div class="rent-car-property">
 			<div class="rent-car-label">SEGMENT</div>
-			<div class="rent-car-value car-price">{{carData['segment']}}</div>
+			<div class="rent-car-value car-price">{{formData.carSegment}}</div>
 		</div>
 	</div>
-
-
 	<div class="rent-form-summary">
 		<div class="rent-form-header rent-form-header">ORDER DETAILS</div>
 		<div class="rent-form-property">
@@ -48,13 +46,11 @@
 		    <span class="rent-form-label">TOTAL AMOUNT</span>
 			<span class="rent-form-value total-amount">{{formData.totalAmount}} PLN</span>
 		</div>
-
-		<a class="rent-form-payment" href="https://ssl.dotpay.pl/test_payment/?id=721088&amount={{formData.totalAmount}}&description=Oplata+za+wypozyczenie+{{carData['name']}}&URL=http://v-ie.uek.krakow.pl/~s180360/app_dev.php/succesful_payment&URLC=http://v-ie.uek.krakow.pl/~s180360/app_dev.php/confirm_payment?carId={{carData['id']}}&firstname={{formData.firstName}}&lastname={{formData.lastName}}&email={{formData.email}}&type=3&api_version=dev">
-			<div class="rent-form-button">
-				PAYMENT
-			</div>
+		<a  href="{{ url('payment') }}">
+			<button class="rent-form-button">
+				<span class=""> PAYMENT </span>
+			</button>
 		</a>
-
 	</div>
 </div>
 
