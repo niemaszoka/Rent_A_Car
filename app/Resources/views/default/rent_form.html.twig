@@ -56,6 +56,8 @@
 		    	required="required"/>
 		</div>
 		<input type="hidden" id="rent_form_carId" name="rent_form[carId]" value="{{carData['id']}}">
+		<input type="hidden" id="rent_form_carName" name="rent_form[carName]" value="{{carData['name']}}">
+		<input type="hidden" id="rent_form_carSegment" name="rent_form[carSegment]" value="{{carData['segment']}}">
 		<input type="hidden" id="rent_form_pricePerDay" name="rent_form[pricePerDay]" value="{{carData['PLNperDay']}}">
 		{{ form_row(form._token) }}
 

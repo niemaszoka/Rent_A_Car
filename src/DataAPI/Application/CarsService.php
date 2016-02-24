@@ -74,7 +74,6 @@ class CarsService
     public function rentCar($carId){
         $this->markCarAsRented($carId);
         $this->cancelBooking($carId);
-
     }
 
     public function changeProperty($carId, $property, $value){

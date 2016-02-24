@@ -23,10 +23,13 @@ class RentForm extends AbstractType
 
         $builder
         ->add('carId', HiddenType::class)
+        ->add('carName', HiddenType::class)
+        ->add('carSegment', HiddenType::class)
         ->add('pricePerDay', HiddenType::class)
         ->add('email', EmailType::class)
         ->add('firstName', TextType::class)
         ->add('lastName', TextType::class)
+        ->add('totalAmount', NumberType::class)
         ->add('confirm', SubmitType::class)
         ->add('rentDays', NumberType::class)
         ->getForm();

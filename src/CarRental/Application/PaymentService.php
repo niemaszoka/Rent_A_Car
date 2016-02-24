@@ -6,17 +6,17 @@ use CarRental\Domain\Model\Payment;
 
 class PaymentService
 {
-    private $carsService;
+    private $formService;
 
-    public function __construct($carsService)
+    public function __construct($formService)
     {
-        $this->carsService = $carsService;
+        $this->formService = $formService;
     }
 
-    public function completePurchase($carId, Payment $payment)
+    public function completePurchase($data, Payment $payment)
     {
         if ($payment->isFinished()) { 
-            $carsService->rentCar($carId);
+            $formService->onPaymentSuccess($data);
             return;
         }
         
