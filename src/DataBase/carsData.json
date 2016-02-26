@@ -5,7 +5,7 @@
             "name": "Renault Twingo",
             "segment": "city",
             "PLNperDay": 80,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "2": {
@@ -21,7 +21,7 @@
             "name": "Renault Clio",
             "segment": "small",
             "PLNperDay": 140,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "4": {
@@ -29,7 +29,7 @@
             "name": "Seat Ibiza",
             "segment": "small",
             "PLNperDay": 120,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "5": {
@@ -37,7 +37,7 @@
             "name": "Skoda Fabia",
             "segment": "small",
             "PLNperDay": 140,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "6": {
@@ -53,7 +53,7 @@
             "name": "Suzuki Swift",
             "segment": "small",
             "PLNperDay": 120,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "8": {
@@ -61,7 +61,7 @@
             "name": "Seat Leon",
             "segment": "compact",
             "PLNperDay": 170,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "9": {
@@ -69,7 +69,7 @@
             "name": "Renault Megane",
             "segment": "compact",
             "PLNperDay": 180,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "10": {
@@ -77,7 +77,7 @@
             "name": "Audi A3",
             "segment": "compact",
             "PLNperDay": 180,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "11": {
@@ -85,7 +85,7 @@
             "name": "Ford Focus",
             "segment": "compact",
             "PLNperDay": 160,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "12": {
@@ -93,7 +93,7 @@
             "name": "Opel Astra",
             "segment": "compact",
             "PLNperDay": 150,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "13": {
@@ -117,7 +117,7 @@
             "name": "Chevrolet Corvette",
             "segment": "sports",
             "PLNperDay": 800,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "16": {
@@ -125,7 +125,7 @@
             "name": "Audi R8",
             "segment": "sports",
             "PLNperDay": "800",
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "17": {
@@ -133,7 +133,7 @@
             "name": "Nissan GT-R",
             "segment": "sports",
             "PLNperDay": 820,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "18": {
@@ -173,7 +173,7 @@
             "name": "Citro\u00ebn Xsara Picasso",
             "segment": "van",
             "PLNperDay": 190,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "23": {
@@ -197,7 +197,7 @@
             "name": "Opel Zafira",
             "segment": "van",
             "PLNperDay": 190,
-            "booked": false,
+            "booked": true,
             "rented": false
         }
     }
