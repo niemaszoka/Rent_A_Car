@@ -12,12 +12,20 @@ neon: #5DFDCB;
 	background-color: transparent;
 	position: absolute;
 	top: 60px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: 20px;
 	float: right;  
 	left: 0px;
-	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 	right: 450px;
 }
 
@@ -30,13 +38,23 @@ neon: #5DFDCB;
 }
 
 .rent-form-summary, .rent-form{
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	width: 400px;
 }
 
 .rent-car-data, .rent-form-summary, .rent-form{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	border: 1px solid #5DFDCB;
     position: relative;
     padding: 30px;
@@ -47,7 +65,10 @@ neon: #5DFDCB;
 
 .rent-car-data{
 	width: 300px;
-	justify-content: flex-start;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
 }
 .rent-form-header, .rent-form-button {
 	color: #035E7B;
@@ -93,9 +114,18 @@ neon: #5DFDCB;
 }
 
 .rent-form-property {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .rent-car-property {
@@ -144,7 +174,6 @@ neon: #5DFDCB;
 	outline: none !important;
 }
 
-}
 .rent-form-payment {
 	text-decoration: none;
 }
