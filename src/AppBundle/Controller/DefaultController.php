@@ -67,8 +67,7 @@ class DefaultController extends Controller
             );
         }
 
-        $carId = $_GET['carId']; 
-        $carsService->bookCar($carId);
+        $carId = $_GET['carId'];
 
         return $this->render('default/rent_form.html.twig', array(
             'form' => $form->createView(),
@@ -89,13 +88,16 @@ class DefaultController extends Controller
             $session = $this->get('session');
             $formData = $session->get('formData'); 
 
+            $carsService = $this->get('cars_service');
+            $carsService->bookCar($formData->getCarId());
+
             $params = array(
                 'id' => '721088',
                 'amount' => $formData->getTotalAmount(),
                 'description' => "Oplata za wypozyczenie ".$formData->getCarName(),
-                'URL' => 'http://v-ie.uek.krakow.pl/~s180360/app_dev.php/succesful_payment',
-                'URLC' => 'http://v-ie.uek.krakow.pl/~s180360/app_dev.php/confirm_payment?'.$formData->getCarId(),
-                'control' => '',
+                'URL' => 'http://v-ie.uek.krakow.pl/~s180277/app_dev.php/succesful_payment',
+                'URLC' => 'http://v-ie.uek.krakow.pl/~s180277/app_dev.php/confirm_payment?'.$formData->getCarId(),
+                'control' => $formData->getCarId(),
                 'firstname' => $formData->getFirstName(),
                 'lastname' => $formData->getLastName(),
                 'email' => $formData->getEmail(),
@@ -113,20 +115,17 @@ class DefaultController extends Controller
     public function confirmPaymentAction(Request $request)    
     {
         $paymentFactory = new PaymentFactory();
-        $carsService = $this->get('cars_service');
         $paymentService = $this->get('payment_service');
 
         try {
             $paymentService->completePurchase(
-                $carsService,
-                $_GET['carId'],
                 $PaymentFactory->createPayment(
-                    new ComletePayment(
+                    new CompletePayment(
                         $request->request->all()
                     )
                 )
             );
- 
+
             return new Response('OK');
         } catch (RentException $e) {
             return new Response('FAIL');
@@ -134,6 +133,13 @@ class DefaultController extends Controller
     }
      
     public function succesfulPaymentAction(Request $request) {
+        $session = $this->get('session');
+        $data = $session->get('formData');
+        $carsService = $this->get('cars_service');
+        $usersService = $this->get('users_service');
+        $carsService->rentCar($data->getCarId());
+        $usersService->rentCar($data);
+
         return $this->render('default/succesfull_payment.html.twig', [
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
         ]);

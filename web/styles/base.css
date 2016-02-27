@@ -1,9 +1,10 @@
 /*>>> Colors <<<
-dark: #241623;
-medium: #F1F1F1;
+dark: #1B1B1E;
+medium: #		;
 light: #E6E8E6;
-accent: #B3001B;
-neon: #C7EF00;
+accent: #D81826;
+neon: #5DFDCB;
+yellow: FFFD98;
 */
 
 * {
@@ -12,7 +13,7 @@ neon: #C7EF00;
 }
 
 html {
-	background-color: #F1F1F1;
+	background-color: #E6E8E6;
 	/*overflow: hidden;*/
 	overflow-x: hidden;
 }
@@ -23,24 +24,99 @@ html {
 }
 
 .neon {
-	color: #C7EF00;
+	color: #5DFDCB;
 }
 
 .base-navbar {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	right: 0px;
 	left: 0px;
 	height: 40px;
-	background-color: #241623;
+	background-color: #1B1B1E;
+	z-index: 3;
 }
 
 .base-header {
-	color: #3C787E;
+	color: #FFFD98;
 	font-weight: 400;
 	font-size: 14px;
 	letter-spacing: 3px;
 	position: relative;
 	left: 75px;
 	top: 4px;
+}
+
+.sidebar {
+	position: fixed;
+	right: 0px;
+	width: 310px;
+	bottom: 0px;
+	top: 40px;
+	background-color: #1B1B1E;
+}
+
+.about-note{
+	color: #E6E8E6;
+	text-align: justify;
+    font-size: 14px;
+        line-height: 24px;
+}
+
+.about{
+	padding: 30px;
+}
+
+.discount {
+    border: 1px solid #5DFDCB;
+/*    position: absolute;
+    top: 40px;*/
+    width: 310px;
+/*    left: 0px;*/
+}
+
+.discount-notice {
+
+}
+
+.discount-percent {
+	/*border-left: 5px solid #5DFDCB !important; */
+    /* border: 1px solid #5DFDCB; */
+    font-size: 30px;
+    color: #FFFD98;
+    text-align: center;
+    /* background-color: #FFFD98; */
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+.discount-description {
+	color: #E6E8E6;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	text-align: center;
+}
+
+.sidebar-header {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-align: center;
+	background-color: #5DFDCB;
+    color: #035E7B;
+    width: 250px;
+    position: relative;
+    padding: 10px 30px 10px 30px;
+}
+
+.discount-note {
+	background-color: #FFFD98;
+    padding: 5px 30px 5px 30px;
+    margin-top: 30px;
+    color: #D81826;
+    font-size: 14px;
+    text-align: center;
 }

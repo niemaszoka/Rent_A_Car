@@ -1,10 +1,10 @@
 /*
 >>> Colors <<<
-dark: #241623;
-medium: #3C787E;
-light: #F1F1F1;
-accent: #B3001B;
-neon: #C7EF00;
+dark: #1B1B1E;
+medium: #035E7B;
+light: #035E7B;
+accent: #D81826;
+neon: #5DFDCB;
 
 */
 
@@ -30,7 +30,7 @@ neon: #C7EF00;
 	background: -o-linear-gradient(top, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%);
 	background: -ms-linear-gradient(top, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%));
 	background: linear-gradient(top bottom, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%));
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c787e', endColorstr='#241623', GradientType=0 );
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035E7B', endColorstr='#1B1B1E', GradientType=0 );
 }
 
 .endscreen {
@@ -53,7 +53,7 @@ neon: #C7EF00;
 }
 
 .endscreen-note-header {
-    color: #C7EF00;
+    color: #5DFDCB;
     font-size: 22px;
     letter-spacing: 1px;
     min-width: 300px;
@@ -70,22 +70,26 @@ neon: #C7EF00;
 	width: 300px;
 	height: 50px;
 	background-color: transparent;
-	border: 5px solid #C7EF00;
+	border: 5px solid #5DFDCB;
 	cursor: pointer;
 }
 
+.endscreen-button:focus{
+	outline: none !important;
+}
+
 .endscreen-button:hover {
-	background-color: #C7EF00;
+	background-color: #5DFDCB;
 	opacity: 0.5;
 	border: 5px solid rgba(199, 239, 0, 1);
 }
 
 .endscreen-button-title {
-	color: #C7EF00;
+	color: #5DFDCB;
 	font-size: 20px;
 	font-weight: 700;
 }
 
 .endscreen-button:hover >.endscreen-button-title {
-	color: #3C787E;
+	color: #035E7B;
 }
