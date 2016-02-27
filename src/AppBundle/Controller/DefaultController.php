@@ -115,31 +115,30 @@ class DefaultController extends Controller
     public function confirmPaymentAction(Request $request)    
     {
         $paymentFactory = new PaymentFactory();
-        $carsService = $this->get('cars_service');
         $paymentService = $this->get('payment_service');
-        $session = $this->get('session');
-        $data = $session->get('formData');
-        $carId = $data->getCarId();
 
         try {
             $paymentService->completePurchase(
-                $data,
                 $PaymentFactory->createPayment(
                     new CompletePayment(
                         $request->request->all()
                     )
                 )
             );
-            $carsService->cancelBooking($carId);
 
             return new Response('OK');
         } catch (RentException $e) {
-            $carsService->cancelBooking($carId);
             return new Response('FAIL');
         }
     }
      
     public function succesfulPaymentAction(Request $request) {
+        $session = $this->get('session');
+        $data = $session->get('formData');
+        $carsService = $this->get('cars_service');
+        $usersService = $this->get('users_service');
+        $carsService->rentCar($data->getCarId());
+        $usersService->rentCar($data);
 
         return $this->render('default/succesfull_payment.html.twig', [
             'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),

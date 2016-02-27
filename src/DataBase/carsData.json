@@ -13,7 +13,7 @@
             "name": "Ford Ka",
             "segment": "city",
             "PLNperDay": 70,
-            "booked": true,
+            "booked": false,
             "rented": false
         },
         "3": {
@@ -197,7 +197,7 @@
             "name": "Opel Zafira",
             "segment": "van",
             "PLNperDay": 190,
-            "booked": true,
+            "booked": false,
             "rented": false
         }
     }

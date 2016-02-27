@@ -1,10 +1,10 @@
 /*
 >>> Colors <<<
-dark: #241623;
-medium: #3C787E;
-light: #F1F1F1;
-accent: #B3001B;
-neon: #C7EF00;
+dark: #1B1B1E;
+medium: #035E7B;
+light: #035E7B;
+accent: #D81826;
+neon: #5DFDCB;
 
 */
 
@@ -12,9 +12,7 @@ neon: #C7EF00;
 	z-index: -2;
 	top: 0px;
 	bottom: 0px;
-	background: #3C787E;
 	position: absolute;
-	filter: saturate(200%);
 }
 
 .entry-image {
@@ -23,30 +21,14 @@ neon: #C7EF00;
 	bottom: 0px;
 	background-image: url('../images/background.jpg');
 	background-size: cover;
-	opacity: 0.5;
-	-webkit-filter: saturate(150%);
-	filter: saturate(150%);
-}
-
-.entry-gradient {
-	top: 0px;
-	bottom: 0px;
-	background: -moz-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(15%, rgba(36,22,35,1)), color-stop(100%, rgba(0,0,0,0)));
-	background: -webkit-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
-	background: -o-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
-	background: -ms-linear-gradient(top, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
-	background: linear-gradient(to bottom, rgba(36,22,35,1) 15%, rgba(0,0,0,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#241623', endColorstr='#3c787e', GradientType=0 );
 }
 
 .entry-header {
-	color: #3C787E;
+	color: #035E7B;
 	font-weight: 400;
 	font-size: 40px;
 	letter-spacing: 3px;
 	position: relative;
-	top: -100px;
 }
 
 .entry-bar {
@@ -57,30 +39,60 @@ neon: #C7EF00;
     position: absolute;
     right: 0px;
     left: 0px;
-    top: 0px;
     bottom: 0px;
+    height: 250px;
+    padding: 40px;
+    background: rgba(4, 4, 4, 0.74);
 }
 
 .entry-button {
 	width: 300px;
-	height: 70px;
+	height: 100px;
 	background-color: transparent;
-	border: 5px solid #C7EF00;
+	border: 5px solid #5DFDCB;
 	cursor: pointer;
-}
+	line-height: 90px;
+	z-index: 2;
+	position: relative;
 
-.entry-button:hover {
-	background-color: #C7EF00;
-	opacity: 0.5;
-	border: 5px solid rgba(199, 239, 0, 1);
 }
 
 .entry-button-title {
-	color: #C7EF00;
-	font-size: 30px;
+	color: #5DFDCB;
+	font-size: 35px;
 	font-weight: 700;
+	z-index: 2;
+	position: relative;
+	transition: linear 0.1s 0.3s;
+    -webkit-transition: color 0.1s 0.3s;
+    -moz-transition: color 0.1s 0.3s;
+    -ms-transition: color 0.1s 0.3s;
 }
 
-.entry-button:hover >.entry-button-title {
-	color: #3C787E;
+
+.entry-button-background {
+    height: inherit;
+    z-index: 0;
+    position: relative;
+    top: -103px;
+    left: -10px;
+    background-color: #5DFDCB;
+    width: 0px;
+    transition: all ease-out 0.6s;
+    -webkit-transition: all ease-out 0.6s;
+    -moz-transition: all ease-out 0.6s;
+    -ms-transition: all ease-out 0.6s;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.entry-button:hover div.entry-button-background{
+	width: inherit;
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+
+.entry-button:hover span.entry-button-title{
+	color: #1B1B1E;
 }

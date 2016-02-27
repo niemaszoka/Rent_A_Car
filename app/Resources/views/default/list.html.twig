@@ -2,35 +2,40 @@
 
 {% block body %}
 	{{ parent() }}
-
-<div class="list-wrapper">
-	<div class="list-title-bar">	
-		<div class="list-title-first">BRAND</div>
-		<div class="list-title">SEGMENT</div>
-		<div class="list-title-last">PRICE PER DAY</div>
-	</div>
-	<div class="list">
-		<form class="list-form" method="post" action="">
-			<div class="list-form-wrapper">
-			    {% for key, car in cars %}
-			    <input class="list-item-checkbox" type="radio" name="car" value="{{key}}" id="{{key}}"/>		    	
-			    <label class="list-item" for="{{key}}">
-			    	<div class="list-item-animate">
-				    	<a class="list-item-link" href="{{ url('rent')}}?carId={{car['id']}}">
-							<div class="list-item-button">
-			    				<span>RENT</span>
-			    			</div>
-			    		</a>
-			    		<div class="car-name">{{car['name']}}</div>
-		    		</div>
-		    		<div class="car-segment">{{car['segment']}}</div>
-					<div class="car-price">{{car['PLNperDay']}} PLN</div>
-			    </label>
-				{% endfor %}
+<div class="list-container">
+<div class="list-header">AVAILABLE CARS</div>
+	<div class="list-wrapper">
+		<div class="list-title-bar">	
+			<div class="list-title-first">BRAND</div>
+			<div class="list-title">SEGMENT</div>
+			<div class="list-title-last">PRICE PER DAY</div>
+		</div>
+		<div class="list">
+			<form class="list-form" method="post" action="">
+				<div class="list-form-wrapper">
+				    {% for key, car in cars %}
+				    <input class="list-item-checkbox" type="radio" name="car" value="{{key}}" id="{{key}}"/>		    	
+				    <label class="list-item" for="{{key}}">
+				    	<div class="list-item-animate">
+					    	<a class="list-item-link" href="{{ url('rent')}}?carId={{car['id']}}">
+								<div class="list-item-button">
+				    				<span>RENT</span>
+				    			</div>
+				    		</a>
+				    		<div class="car-name">{{car['name']}}</div>
+			    		</div>
+			    		<div class="car-segment">{{car['segment']}}</div>
+						<div class="car-price">{{car['PLNperDay']}} PLN</div>
+				    </label>
+					{% endfor %}
+				</div>
+			</form>
 			</div>
-		</form>
 		</div>
 	</div>
+</div>
+<div class="footer">
+	<div class="footer-info">&#169 SYLWIA GRZEGOLEC & ARKADIUSZ JAKUBAS</div>
 </div>
 {% endblock %}
 
