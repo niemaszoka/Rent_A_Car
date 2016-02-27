@@ -27,6 +27,10 @@ html {
 	color: #5DFDCB;
 }
 
+.yellow {
+	color: #FFFD98;
+}
+
 .base-navbar {
 	position: fixed;
 	top: 0px;

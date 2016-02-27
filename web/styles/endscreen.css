@@ -15,7 +15,7 @@ neon: #5DFDCB;
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	background-image: url('../images/endscreen.jpg');
+	background-image: url('../images/final.jpg');
 	background-size: cover;
 	background-position: 100% 100%;
 	position: absolute;
@@ -24,11 +24,9 @@ neon: #5DFDCB;
 .endscreen-cover {
 	top: 0px;
 	bottom: 0px;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop rgba(0,0,0,0) 15%), color-stop(rgba(36,22,35,1) 100%));
 	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%,rgba(36,22,35,0.8) 80%, rgba(36,22,35,1) 95%);
-	background: -o-linear-gradient(top, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%);
-	background: -ms-linear-gradient(top, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%));
+	background: -webkit-linear-gradient(top bottom, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%));
 	background: linear-gradient(top bottom, rgba(0,0,0,0) 15%, rgba(36,22,35,1) 100%));
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035E7B', endColorstr='#1B1B1E', GradientType=0 );
 }
@@ -42,19 +40,29 @@ neon: #5DFDCB;
 }
 
 .endscreen-note {
-	position: absolute;
-	left: 100px;
-	bottom: 40px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	right: 100px;
+    position: absolute;
+    left: 0px;
+    bottom: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    right: 0px;
 }
 
 .endscreen-note-header {
-    color: #5DFDCB;
-    font-size: 22px;
+	text-align: center;
+    color: #FFFD98;
+    font-size: 30px;
     letter-spacing: 1px;
     min-width: 300px;
     margin-bottom: 30px;
@@ -67,11 +75,12 @@ neon: #5DFDCB;
 }
 
 .endscreen-button {
-	width: 300px;
-	height: 50px;
+	width: 380px;
+	height: 100px;
 	background-color: transparent;
-	border: 5px solid #5DFDCB;
+	border: 5px solid #FFFD98;
 	cursor: pointer;
+	margin-top:30px;
 }
 
 .endscreen-button:focus{
@@ -79,17 +88,11 @@ neon: #5DFDCB;
 }
 
 .endscreen-button:hover {
-	background-color: #5DFDCB;
-	opacity: 0.5;
-	border: 5px solid rgba(199, 239, 0, 1);
+
 }
 
 .endscreen-button-title {
-	color: #5DFDCB;
-	font-size: 20px;
+	color: #FFFD98;
+	font-size: 30px;
 	font-weight: 700;
-}
-
-.endscreen-button:hover >.endscreen-button-title {
-	color: #035E7B;
 }

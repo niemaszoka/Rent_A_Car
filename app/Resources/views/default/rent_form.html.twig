@@ -4,7 +4,7 @@
 	{{ parent() }}
 <div class="rent-wrapper">
 	<div class="rent-car-data">
-		<div class="rent-form-header">CHOOSEN CAR</div>
+		<div class="rent-form-header"><i class="fa fa-car"></i> CHOOSEN CAR</div>
 		<div class="rent-car-property">
 			<div class="rent-car-label">BRAND</div>
 			<div class="rent-car-value car-name">{{carData['name']}}</div>
@@ -21,7 +21,7 @@
 	</div>
 
 	<form class="rent-form" name="rentForm" method="post">
-		<div class="rent-form-header">PLEASE ENTER YOUR DATA</div>
+		<div class="rent-form-header"><i class="fa fa-user"></i> PLEASE ENTER YOUR DATA</div>
 		<div class="rent-form-property">
 		    <label class="rent-form-label" for="rent_form_email">EMAIL</label>
 		    <input class="rent-form-input" 
@@ -65,6 +65,6 @@
 	</form>
 </div>
 <div class="footer">
-	<div class="footer-info">&#169 SYLWIA GRZEGOLEC & ARKADIUSZ JAKUBAS</div>
+	<div class="footer-info"><span class="yellow">&#169</span> SYLWIA GRZEGOLEC & ARKADIUSZ JAKUBAS</div>
 </div>
 {% endblock %}
